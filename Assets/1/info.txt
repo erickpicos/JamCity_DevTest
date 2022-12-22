@@ -1,0 +1,1 @@
+Se modificó el script de UnityHealth, se agregaron Enums para determinar la categoría a la que podría pertenecer cada objeto, de acuerdo con la categoría seleccionada se ejecuta la funcionalidad correspondiente.

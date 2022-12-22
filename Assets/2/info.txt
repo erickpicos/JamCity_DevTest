@@ -1,0 +1,5 @@
+Se usó RigidBodies en modo Kinematic, la aceleración de la esfera en el eje "Y" se ve disminuida por una constantes que se configura en el script, por defecto es 9,8. Del mismo modo el porcentaje de velocidad perdida ante una colisión se puede modificar, por defecto es 0.7(70%) para ambos ejes.
+
+Al clicar y arrastrar aparecerá una pelota la cual se mueve en la dirección contraria al arrastre, esta se desactiva luego de 5 segundos.
+
+Para evitar gastos innecesarios de memoria se hizo uso del patrón de diseño "OBJECT POOLING", las esferas no son destruidas sino que pasados 5 segundos estas se desactivan y reinician sus parámetros, el script busca los objetos desactivados y si encuentra uno hace uso de él, en cambio cuando no hay mas objetos instancia uno nuevo, aumentando el indice de la lista en 1.
