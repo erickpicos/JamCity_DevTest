@@ -15,6 +15,10 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics/math.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -63,7 +67,7 @@
       <updated>1671573950157</updated>
       <workItem from="1671573965797" duration="16132000" />
       <workItem from="1671723031745" duration="9660000" />
-      <workItem from="1671749156125" duration="3497000" />
+      <workItem from="1671749156125" duration="11857000" />
     </task>
     <servers />
   </component>
