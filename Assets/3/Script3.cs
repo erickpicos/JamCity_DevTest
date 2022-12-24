@@ -33,12 +33,10 @@ public class Script3 : MonoBehaviour
         string binario = InfoDataToSend();
         byte decimalToSend = (byte) BinarioToDecimal(binario);
         
-        //Debug.Log("Sent_Binario: "+binario+" Byte: "+decimalToSend);
         dataWriter.Put(decimalToSend);
         if(binario[5] == '1') dataWriter.Put((sbyte)(transform.position.x * 25));
         if(binario[4] == '1') dataWriter.Put((sbyte)(transform.position.y * 25));
         if(binario[3] == '1') dataWriter.Put((sbyte)(transform.position.z * 25));
-
         if(binario[2] == '1') dataWriter.Put((short)(transform.eulerAngles.x * 80));
         if(binario[1] == '1') dataWriter.Put((short)(transform.eulerAngles.y * 80));
         if(binario[0] == '1') dataWriter.Put((short)(transform.eulerAngles.z * 80));
@@ -55,7 +53,6 @@ public class Script3 : MonoBehaviour
         byte decimalReceived = dataReader.GetByte();
         string binario = DecimalToBinario(decimalReceived);
 
-        //Debug.Log("Rece_Binario: "+binario+" ByteDecimal: "+decimalReceived);
         Vector3 newPosition = new Vector3();
         if (binario[5] == '1') {newPosition.x = dataReader.GetSByte() / 25f;} else {newPosition.x = transform.localPosition.x;}
         if (binario[4] == '1') {newPosition.y = dataReader.GetSByte() / 25f;} else {newPosition.y = transform.localPosition.y;}
@@ -67,8 +64,6 @@ public class Script3 : MonoBehaviour
         
         transform.position = newPosition;
         transform.eulerAngles = newRotation;
-
-        Debug.Log("Receive: "+ transform.eulerAngles);
     }
 
     private string DecimalToBinario(int numero)
@@ -104,8 +99,7 @@ public class Script3 : MonoBehaviour
     }
 
     public string InfoDataToSend()
-    {   //Debug.Log((sbyte)(transformDataToSend.position.x * 25) +"--"+ lastTransformPosition.x);
-        //Debug.Log((short)(transformDataToSend.eulerAngles.x * 80) +"--"+ lastTransformRotation.x);
+    { 
         int info = 0;
         if ((sbyte)(transformDataToSend.position.x * 25) != lastTransformPosition.x) info += 1;
         if ((sbyte)(transformDataToSend.position.y * 25) != lastTransformPosition.y) info += 10;
