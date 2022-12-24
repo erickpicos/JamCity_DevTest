@@ -1,0 +1,7 @@
+Se agregaron 3 AudioSources, uno para el sonido de los pasos, uno para los sonidos aleatorios al presionar espacio y uno para el sonido de ambiente (Musica).
+
+De acuerdo con el tipo de suelo sobre el que esté la esfera, se cambiará el clip de audio del AudioSource de los pasos.
+
+Para el funcionamiento del sonido de los pasos se verifica si el AudioSource no se encuentra actualmente ejecutando un sonido, en caso contrario se ejecuta el método AudioSource.Play()
+
+Los sliders controlan los niveles de sonido, el sonido los AudioSources se multiplica por el valor del Slider del volumen Master para que así en caso de ester ser 1 no se vea afectado el volumen, y conforme vaya disminuyengo, también lo harán los otros AudioSources ya que su volumen depende del volumen del Master.

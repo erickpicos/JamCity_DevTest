@@ -1,0 +1,11 @@
+-Cree un método para convertir de Binario a Decimal y uno para convertir de Decimal a Binario.
+
+Con el método InfoDataToSend se verifica los valores que han cambiado en el transform en relación al último envío de información. Si el valor es el mismo, se omite el envío de esa información, y el bit correspondiente en el paquete se marca como 0.
+
+Se envía información en un Byte que corresponde al sistema binario generado en el método que verifica los valores a enviar, ese Byte una vez que es recibido es convertido a Binario para verificar cuales fueron los datos enviados y poder enviarlos.
+
+-Cree un Script que restringe la posición del objeto "TransformToSend" entre (-5,-5,-5) y (5,5,5)
+
+La información de la posición del objeto se envía mediante un Sbyte(1Byte), al ser la máxima posición 5 y la minima -5, se puede enviar la información con un desfase de máximo "0,04" unidades. debido a que en un Sbyte se pueden contener números de -128 a 127
+
+La información de la rotación del objeto se envía mediante un Short(2Bytes) por cada eje, al ser la máxima rotación 360 y la minima -360, se puede enviar la información con un desfase de máximo "0,0125" unidades. debido a que en un Short se pueden contener números de -32.768 a 32.767
